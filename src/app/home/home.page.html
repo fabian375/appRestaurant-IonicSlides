@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <h5>{{title}}</h5>
+    <ion-slides>
+      <ion-slide *ngFor="let item of arrayMenu">
+        <ion-card>
+          <img class="ion-img-internal" src="{{item.imagenURL}}">
+          <ion-card-header>
+            <ion-card-subtitle>
+              <h5 class="ion-text-capitalize">{{item.diaSemana}}</h5>
+            </ion-card-subtitle>
+            <ion-card-subtitle>
+              <h5 class="ion-text-capitalize">{{item.descripcion}}</h5>
+            </ion-card-subtitle>
+            <ion-card-title>
+              <p>Dto.{{item.descuento}}</p>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-button color="warning" class="ion-text-capitalize">
+            <ion-icon name="cart"></ion-icon>Pedir</ion-button>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
